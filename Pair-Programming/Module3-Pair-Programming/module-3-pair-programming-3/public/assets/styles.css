@@ -1,0 +1,265 @@
+body {
+    /*element appearance*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87ceeb;
+
+    /*grid within element*/
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/*no underline, affects all links*/
+a {
+    text-decoration: none;
+}
+
+/*more appealing visited link color, affects all links*/
+a:visited {
+    color: #2200ff;
+}
+
+header {
+    /*grid within element*/
+    grid-area:header;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+}
+
+nav ul {
+    /*element appearance*/
+    margin: 0;
+    padding: 20px 0 0 0;
+
+    /*flex within element*/
+    display: flex;
+    justify-content: end;
+    justify-content: space-evenly;
+}
+
+/*how elements naturally appear*/
+nav ul li {
+    list-style: none;
+    width: 30%;
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+/*change in element when mouse hovers*/
+nav ul li:hover {
+    list-style: none;
+    width: 30%;
+    background-color: #000000;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+/*to affect text appearance since it is a link*/
+nav ul li a:hover {
+    color: #00afef;
+}
+
+header img {
+    /*element appearance*/
+    height: 100px;
+    width: auto;
+}
+
+header h1 {
+    /*element appearance*/
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+main li:before {
+    /*element appearance*/
+    list-style: none;
+    content: "🍡";
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+main section,
+footer {
+    /*element appearance*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+}
+
+main {
+    /*grid within element*/
+    display: grid;
+    grid-template-areas:
+        "know know"
+        "race summer";
+}
+
+.know {
+    grid-area: know;
+
+    /*flex within element*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.know img {
+    /*element appearance applies only to image in know section*/
+    object-fit: cover;
+    margin-right: 20px;
+    height: 350px;
+    width: 35%;
+}
+
+#know-text{
+    /*element appearance applies only to text in know section*/
+    /*makes it stay to the right of the image until mobile*/
+    width:55%;
+}
+
+.race {
+    grid-area: race;
+
+    /*grid within element*/
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-areas:
+        "image header"
+        "image body";
+}
+
+#race-image {
+    grid-area: image;
+}
+
+#race-header {
+    grid-area: header;
+
+    /*element appearance*/
+    text-align: center;
+}
+
+#race-body {
+    grid-area: body;
+}
+
+.summer {
+    grid-area: summer;
+
+    /*flex within element*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#summer-header {
+    /*element appearance*/
+    text-align: center;
+}
+
+/*how elements naturally appear*/
+a.store-button:link {
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+/*change in element when mouse hovers*/
+a.store-button:hover {
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #00afef;
+    background-color: #000000;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/*Changes that occur when using mobile*/
+@media (max-width: 800px) {
+
+    header {
+        /*change in grid formatting*/
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+            "first half"
+            "second second";
+    }
+
+    h1 {
+        grid-area: half;
+
+        /*adds more spacing around text*/
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        grid-area: second;
+    }
+
+    nav ul {
+        /*corrects element appearance for mobile*/
+        padding: 0 0 20px 0;
+        height: 40px;
+    }
+
+    nav ul li {
+        /*corrects element appearance for mobile*/
+        width: 50%;
+        height: 100%;
+        margin: 10px;
+    }
+
+    nav ul li:hover {
+        /*corrects element appearance for mobile*/
+        width: 50%;
+        margin: 10px;
+    }
+
+    main {
+        /*change in grid formatting*/
+        grid-template-areas:
+            "know"
+            "race"
+            "summer";
+    }
+
+    .know img {
+        /*makes it so that element fills screen width*/
+        width: 100%;
+    }
+
+    #know-text{
+        /*makes it so that element fills screen width*/
+        width:100%;
+    }
+
+    .race {
+        /*change in grid formatting to flex*/
+        grid-template-areas: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+}
