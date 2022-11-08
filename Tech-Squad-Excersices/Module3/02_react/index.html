@@ -1,0 +1,122 @@
+<!--
+    Based on work in Web-Dev-For-Beginners 
+-->
+<!--
+    MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bank App Dashboard</title>
+</head>
+<body>
+    <div id="app">
+        <section class="dashboard-page">
+            <header class="dashboard-header">
+                <img class="dashboard-logo" src="logo.svg" alt="Squirrel Banking Logo">
+                <h1 class="dashboard-title hide-xs">Squirrel Banking</h1>
+                <button>Logout</button>
+            </header>
+            <div class="balance">
+                <div>Balance</div>
+                <span id="balance">325.00</span>
+                <span id="currency">$</span>
+            </div>
+            <div class="dashboard-content">
+                <div class="transactions-title">
+                    <h2 id="description">Test account</h2>
+                    <button>Add transaction</button>
+                </div>
+                <table class="transactions-table">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Object</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody id="transactions">
+        <tr>
+            <td>2022-01-01</td>
+            <td>Pocket money</td>
+            <td>50.00</td>
+        </tr>
+    
+        <tr>
+            <td>2022-01-03</td>
+            <td>Book</td>
+            <td>-10.00</td>
+        </tr>
+    
+        <tr>
+            <td>2022-01-14</td>
+            <td>Sandwich</td>
+            <td>-5.00</td>
+        </tr>
+    
+        <tr>
+            <td>2022-01-22</td>
+            <td>Maddy</td>
+            <td>50.00</td>
+        </tr>
+    
+        <tr>
+            <td>2022-01-25</td>
+            <td>Allowance</td>
+            <td>100.00</td>
+        </tr>
+    
+        <tr>
+            <td>2022-01-28</td>
+            <td>Gift card</td>
+            <td>100.00</td>
+        </tr>
+    </tbody>
+                </table>
+            </div>
+        </section>
+        <div id="transactionDialog" class="dialog">
+            <div class="dialog-content">
+                <h2 class="text-center">Add transaction</h2>
+                <form id="transactionForm">
+                    <label for="date">Date</label>
+                    <input id="date" name="date" type="date" required="">
+                    <label for="object">Object</label>
+                    <input id="object" name="object" type="text" maxlength="50" required="">
+                    <label>Amount (use negative value for debit)</label>
+                    <input id="amount" name="amount" type="number" value="0" step="any" required="">
+                    <div id="transactionError" class="error"></div>
+                    <div class="dialog-buttons">
+                        <button class="button-alt" formaction="javascript:cancelTransaction()" formnovalidate="">Cancel</button>
+                        <button id="okButton" formaction="javascript:confirmTransaction()">OK</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

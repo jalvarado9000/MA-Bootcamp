@@ -1,0 +1,7 @@
+CREATE TABLE TRANSACTIONS
+(
+    id      BIGINT AUTO_INCREMENT PRIMARY KEY,
+    date    VARCHAR(20) NOT NULL,
+    object  VARCHAR(50),
+    amount  DOUBLE NOT NULL
+);
