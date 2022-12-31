@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgba(192, 192, 192, 0.1);
+  height: 200vh;
+}
+
+aside {
+  position: fixed;
+  border-right: solid 1px;
+  border-color: rgba(0, 173, 238, 0.4);
+  height: 100%;
+  width: 200px;
+  
+}
+
+aside > img{
+  height: 120px;
+  margin-left: 20%;
+
+}
+
+main{
+margin-left: 200px;
+padding:20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+/*
+nav > ul > li {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: solid 1px;
+  border-color: rgba(0, 173, 238, 0.4);
+  padding: 10px;
+  width: 70%;
+  
+  
+}
+*/
+
+ul > li > a{
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#00ADEE;
+  text-decoration: none;
+  text-align: center;
+ 
+  list-style: none;
+  
+  
+}
+
+
+
+nav > ul > li {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: solid 1px;
+  border-color: rgba(0, 173, 238, 0.4);
+  width: 70%;
+  margin-left: 30px;
+  list-style: none;
+  padding: 15px 15px;
+  
+}
+
+li:first-child{
+  text-decoration: underline;
+}
+
+main > header >img {
+  height: 100px;
+  margin-bottom: 10px;
+  
+  
+}
+
+#contact-us{
+  display: inline-block;
+  width: 33%;
+  padding:5px;
+}
+#our-work{
+  display: inline-block;
+  width: 33%;
+  border-right: solid 1px;
+  border-color: rgba(170, 239, 135, 0.8);
+  padding:5px;
+  
+}
+
+#what-we-do{
+  display: inline-block;
+  width: 33%;
+  border-right: solid 1px;
+  border-color: rgba(170, 239, 135, 0.8);
+  padding:5px;
+}
+
+h2 {
+  color:#8CC36F
+}
+h2>i{
+  margin: 10px;
+}
+
+
+.banner{
+  width: 100%;
+}
+
+main > section > div > h2 > i{
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+img.banner {
+  display: block;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  position: fixed;
+  width: 200px;
+  border-right: 1px solid rgba(0, 173, 238, 0.4);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body > aside > img {
+  height: 120px;
+  margin-left: 40px;
+}
+aside > nav > ul > li {
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 173, 238, 0.4);
+  margin: 10px auto;
+  padding-bottom: 10px;
+  width: 80%;
+  line-height: 2;
+}
+aside > nav > ul > li > a {
+  font-weight: bold;
+  color: #00ADEE;
+  text-decoration: none;
+}
+aside > nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+main {
+  margin-left: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+main > header {
+  height: 100px;
+}
+header > img {
+  height: 80%;
+}
+
+main > section > div {
+  display: inline-block;
+}
+section > div > h2 {
+  color: #8CC36F;
+} 
+section > h2 > i {
+  margin-right: 10px;
+}
+div:first-child {
+  vertical-align: top;
+  width: 33%;
+  padding-right: 20px;
+  margin-top: 20px;
+  border-right: 1px solid  rgba(170, 239, 135, 0.8);
+}
+div:last-child {
+  width: 33%;
+  padding-right: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+div:not(first-child):not(last-child) {
+  width: 33%;
+  padding-right: 20px;
+  margin-top: 20px;
+  border-right: 1px solid  rgba(170, 239, 135, 0.8);
+  padding-left: 20px;
+  
+}
+
+
+
+*/
+
